@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Délices Dorés - Pâtisserie Artisanale</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="announcement-bar">
+            🍰 Commandes spéciales pour mariages et événements | Livraison gratuite dès 300 DH 🎂
+        </div>
+        <nav>
+            <div class="logo">Délices Dorés</div>
+            <ul class="nav-links">
+                <li><a href="#home">Accueil</a></li>
+                <li><a href="#products">Nos Créations</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- HOME SECTION -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Délices Dorés</h1>
+            <p class="subtitle">L'Art de la Pâtisserie Française</p>
+            <p>Depuis 1985, nous créons des moments magiques avec nos pâtisseries artisanales. Chaque création est préparée avec passion, des ingrédients de première qualité et un savoir-faire transmis de génération en génération.</p>
+            <div class="hero-buttons">
+                <a href="#products" class="btn btn-primary">Découvrir Nos Créations</a>
+                <a href="#contact" class="btn btn-secondary">Nous Contacter</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="about">
+        <div class="container">
+            <h2 class="section-title fade-in">Notre Histoire</h2>
+            <p class="section-subtitle fade-in">Une tradition familiale de l'excellence pâtissière</p>
+            
+            <div class="about-content">
+                <div class="about-text fade-in">
+                    <h3>Maître Pâtissier depuis 1985</h3>
+                    <p>Fondée par Henri Dubois, Délices Dorés perpétue l'art de la pâtisserie française traditionnelle. Notre atelier, situé au cœur de Casablanca, est devenu une référence pour les amateurs de douceurs authentiques.</p>
+                    <p>Nous sélectionnons rigoureusement nos ingrédients : beurre AOP de Normandie, chocolat Valrhona, fruits de saison et épices rares. Chaque gâteau raconte une histoire, chaque bouchée révèle notre passion.</p>
+                    <p>Aujourd'hui dirigée par Marie Dubois, notre pâtisserie combine tradition et innovation pour vous offrir des créations uniques qui émerveillent petits et grands.</p>
+                </div>
+                
+                <div class="about-features fade-in">
+                    <div class="feature">
+                        <span class="feature-icon">👨‍🍳</span>
+                        <h4>Savoir-faire Artisanal</h4>
+                        <p>3 générations de maîtres pâtissiers</p>
+                    </div>
+                    <div class="feature">
+                        <span class="feature-icon">🌟</span>
+                        <h4>Ingrédients Premium</h4>
+                        <p>Sélection rigoureuse des meilleurs produits</p>
+                    </div>
+                    <div class="feature">
+                        <span class="feature-icon">🎂</span>
+                        <h4>Créations Sur Mesure</h4>
+                        <p>Gâteaux personnalisés pour vos événements</p>
+                    </div>
+                    <div class="feature">
+                        <span class="feature-icon">🚚</span>
+                        <h4>Livraison Fraîcheur</h4>
+                        <p>Livraison le jour même dans tout Casablanca</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRODUCTS SECTION -->
+    <section id="products" class="products">
+        <div class="container">
+            <h2 class="section-title fade-in">Nos Créations</h2>
+            <p class="section-subtitle fade-in">Des pâtisseries d'exception pour tous les goûts</p>
+            
+            <div class="products-categories fade-in">
+                <button class="category-btn active" onclick="filterProducts('all')">Toutes</button>
+                <button class="category-btn" onclick="filterProducts('gateaux')">Gâteaux</button>
+                <button class="category-btn" onclick="filterProducts('tartes')">Tartes</button>
+                <button class="category-btn" onclick="filterProducts('viennoiseries')">Viennoiseries</button>
+                <button class="category-btn" onclick="filterProducts('macarons')">Macarons</button>
+                <button class="category-btn" onclick="filterProducts('chocolats')">Chocolats</button>
+            </div>
+
+            <div class="products-grid">
+                <!-- Gâteaux -->
+                <div class="product-card fade-in" data-category="gateaux">
+                    <div class="product-image">
+                        <img src="https://gateaux-et-delices.com/wp-content/uploads/2021/10/drip-cake1-520x245.jpg" alt="Forêt Noire Traditionnelle">
+                        <div class="product-badge">Bestseller</div>
+                    </div>
+                    <div class="product-info">
+                        <h4>Forêt Noire Traditionnelle</h4>
+                        <p class="product-description">Biscuit au chocolat, crème chantilly, cerises griottes et copeaux de chocolat noir. Un classique revisité avec passion.</p>
+                        <div class="product-meta">
+                            <span>🕐 Préparation: 24h</span>
+                            <span>👥 6-8 personnes</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="price">280 DH</span>
+                        </div>
+                        <button class="order-btn" onclick="orderProduct('Forêt Noire Traditionnelle', 280)">Commander</button>
+                    </div>
+                </div>
+
+                <div class="product-card fade-in" data-category="gateaux">
+                    <div class="product-image">
+                        <img src="https://adc-dev-images-recipes.s3.eu-west-1.amazonaws.com/shutterstock_249954670_1_.jpg" alt="Forêt Noire Traditionnelle">
+                        <div class="product-badge">Nouveau</div>
+                    </div>
+                    <div class="product-info">
+                        <h4>Opéra Royal</h4>
+                        <p class="product-description">Biscuit Joconde, ganache chocolat, crème au beurre café et glaçage miroir. L'élégance parisienne.</p>
+                        <div class="product-meta">
+                            <span>🕐 Préparation: 48h</span>
+                            <span>👥 8-10 personnes</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="price">220 DH</span>
+                        </div>
+                        <button class="order-btn" onclick="orderProduct('Opéra Royal', 220)">Commander</button>
+                    </div>
+                </div>
+
+                <div class="product-card fade-in" data-category="gateaux">
+                    <div class="product-image">
+                        <img src="https://www.surprisesetgourmandises.fr/wp-content/uploads/2024/11/tarte-vanille-noisette-6-600x403.jpg" alt="Forêt Noire Traditionnelle">
+                        <div class="product-badge">Fait Maison</div>
+                    </div>
+                    <div class="product-info">
+                        <h4>Saint-Honoré Délice</h4>
+                        <p class="product-description">Pâte feuilletée, choux caramélisés, crème chiboust vanille Madagascar. Un chef-d'œuvre de la pâtisserie.</p>
+                        <div class="product-meta">
+                            <span>🕐 Préparation: 24h</span>
+                            <span>👥 6-8 personnes</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="price">300 DH</span>
+                        </div>
+                        <button class="order-btn" onclick="orderProduct('Saint-Honoré Délice', 300)">Commander</button>
+                    </div>
+                </div>
+
+                <!-- Tartes -->
+                <div class="product-card fade-in" data-category="tartes">
+                    <div class="product-image">
+                        <img src="https://resize.elle.fr/portrait/var/plain_site/storage/images/elle-a-table/import/recettes-ddf/tarte-aux-fruits-et-creme-patissiere-maison-sur-pate-cannelee-2062776/22152232-1-fre-FR/Tarte-aux-fruits-et-creme-patissiere-maison-sur-pate-cannelee.jpg" alt="Forêt Noire Traditionnelle">
+                        <div class="product-badge">Fruits de Saison</div>
+                    </div>
+                    <div class="product-info">
+                        <h4>Tarte aux Fraises</h4>
+                        <p class="product-description">Pâte sablée maison, crème pâtissière vanille et fraises fraîches de Larache. La fraîcheur en bouche.</p>
+                        <div class="product-meta">
+                            <span>🕐 Préparation: 12h</span>
+                            <span>👥 6-8 personnes</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="price">220 DH</span>
+                        </div>
+                        <button class="order-btn" onclick="orderProduct('Tarte aux Fraises', 220)">Commander</button>
+                    </div>
+                </div>
+
+                <div class="product-card fade-in" data-category="tartes">
+                    <div class="product-image">
+                        <img src="https://resize.elle.fr/original/var/plain_site/storage/images/imports/repack/elle-a-table/tarte-au-citron-meringuee-nuage-de-barbe-a-papa-4074304/97756372-2-fre-FR/Tarte-au-citron-meringuee-nuage-de-barbe-a-papa.jpg" alt="Forêt Noire Traditionnelle">
+                        <div class="product-badge">Acidulée</div>
+                    </div>
+                    <div class="product-info">
+                        <h4>Tarte au Citron Meringuée</h4>
+                        <p class="product-description">Pâte sucrée, curd de citron de Menton et meringue italienne dorée au chalumeau. Un équilibre parfait.</p>
+                        <div class="product-meta">
+                            <span>🕐 Préparation: 24h</span>
+                            <span>👥 8-10 personnes</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="price">240 DH</span>
+                        </div>
+                        <button class="order-btn" onclick="orderProduct('Tarte au Citron Meringuée', 240)">Commander</button>
+                    </div>
+                </div>
+
+                <!-- Viennoiseries -->
+                <div class="product-card fade-in" data-category="viennoiseries">
+                    <div class="product-image">
+                        <img src="https://resize.elle.fr/article/var/plain_site/storage/images/elle-a-table/les-dossiers-de-la-redaction/dossier-de-la-redac/croissant-sale/76577027-1-fre-FR/7-recettes-de-croissants-sales-a-tomber.jpg" alt="Forêt Noire Traditionnelle">
+                        <div class="product-badge">Chaque Matin</div>
+                    </div>
+                    <div class="product-info">
+                        <h4>Croissants Artisanaux</h4>
+                        <p class="product-description">Feuilletage au beurre AOP, fermentation lente 12h. Croustillants à l'extérieur, moelleux à l'intérieur.</p>
+                        <div class="product-meta">
+                            <span>🕐 Frais du matin</span>
+                            <span>📦 Par 6</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="price">45 DH</span>
+                        </div>
+                        <button class="order-btn" onclick="orderProduct('Croissants Artisanaux (6)', 45)">Commander</button>
+                    </div>
+                </div>
+
+                <div class="product-card fade-in" data-category="viennoiseries">
+                    <div class="product-image">
+                        <img src="https://t4.ftcdn.net/jpg/03/56/17/19/360_F_356171999_DJv4qiMmehBKdcHtOtaFngGOfOVWmPxq.jpg" alt="Forêt Noire Traditionnelle">
+                        <div class="product-badge">Gourmand</div>
+                    </div>
+                    <div class="product-info">
+                        <h4>Pain au Chocolat Premium</h4>
+                        <p class="product-description">Pâte feuilletée et barrettes de chocolat noir Valrhona 70%. Le plaisir à l'état pur.</p>
+                        <div class="product-meta">
+                            <span>🕐 Frais du matin</span>
+                            <span>📦 Par 4</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="price">38 DH</span>
+                        </div>
+                        <button class="order-btn" onclick="orderProduct('Pain au Chocolat Premium (4)', 38)">Commander</button>
+                    </div>
+                </div>
+
+                <!-- Macarons -->
+                <div class="product-card fade-in" data-category="macarons">
+                    <div class="product-image">
+                        <img src="https://i.etsystatic.com/17765268/r/il/4822b1/4560934625/il_1080xN.4560934625_khez.jpg" alt="Forêt Noire Traditionnelle">
+                        <div class="product-badge">Coffret Prestige</div>
+                    </div>
+                    <div class="product-info">
+                        <h4>Macarons Assortiment</h4>
+                        <p class="product-description">12 macarons aux saveurs variées : vanille, chocolat, framboise, pistache, caramel et rose. Coffret élégant inclus.</p>
+                        <div class="product-meta">
+                            <span>🕐 Préparation: 24h</span>
+                            <span>📦 Coffret de 12</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="price">180 DH</span>
+                        </div>
+                        <button class="order-btn" onclick="orderProduct('Macarons Assortiment (12)', 180)">Commander</button>
+                    </div>
+                </div>
+
+                <!-- Chocolats -->
+                <div class="product-card fade-in" data-category="chocolats">
+                    <div class="product-image">
+                        <img src="https://thumbs.dreamstime.com/b/chocolats-fins-assortis-36662203.jpg" alt="Forêt Noire Traditionnelle">
+                        <div class="product-badge">Artisanal</div>
+                    </div>
+                    <div class="product-info">
+                        <h4>Chocolats Fins Assortis</h4>
+                        <p class="product-description">Sélection de 16 chocolats fins : ganaches, pralinés et truffes. Chocolat Valrhona et garnitures d'exception.</p>
+                        <div class="product-meta">
+                            <span>🕐 Préparation: 48h</span>
+                            <span>📦 Ballotins de 16</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="price">270 DH</span>
+                        </div>
+                        <button class="order-btn" onclick="orderProduct('Chocolats Fins Assortis (16)', 270)">Commander</button>
+                    </div>
+                </div>
+
+                <div class="product-card fade-in" data-category="gateaux">
+                    <div class="product-image">
+                        <img src="https://img.freepik.com/photos-premium/gateau-mariage-luxe-design-haut-gamme-exclusif-magnifiquement-decore-gateau-professionnel-plusieurs-niveaux-comme-dessert-principal-pour-celebration-mariage-exquise-generative-ai_360074-64404.jpg" alt="Forêt Noire Traditionnelle">
+                        <div class="product-badge">Sur Mesure</div>
+                    </div>
+                    <div class="product-info">
+                        <h4>Gâteau Personnalisé</h4>
+                        <p class="product-description">Création unique selon vos désirs : thème, saveurs, décoration. Parfait pour mariages, anniversaires et événements.</p>
+                        <div class="product-meta">
+                            <span>🕐 Préparation: 72h</span>
+                            <span>👥 Sur mesure</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="price">Sur Devis</span>
+                        </div>
+                        <button class="order-btn" onclick="orderProduct('Gâteau Personnalisé', 'devis')">Demander un Devis</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title fade-in">Contactez-Nous</h2>
+            <p class="section-subtitle fade-in">Nous sommes à votre écoute pour toutes vos envies sucrées</p>
+            
+            <div class="contact-content">
+                <div class="contact-info fade-in">
+                    <h3>Informations Pratiques</h3>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div class="contact-details">
+                            <h4>Notre Adresse</h4>
+                            <p>45 Avenue Mohammed V<br>
+                            Quartier des Habous<br>
+                            20250 Casablanca, Maroc</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <div class="contact-details">
+                            <h4>Téléphone</h4>
+                            <p>Fixe: +212 7 20 21 41 30<br>
+                            Mobile: +212  7 20 21 41 30<br>
+                            WhatsApp disponible</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">📧</div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p>elkassaouihouda0@gmail.com<br>
+                            info@delicesdores.ma<br>
+                            evenements@delicesdores.ma</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">🕐</div>
+                        <div class="contact-details">
+                            <h4>Horaires d'Ouverture</h4>
+                            <p>Lundi - Vendredi: 7h00 - 20h00<br>
+                            Samedi: 7h00 - 21h00<br>
+                            Dimanche: 8h00 - 19h00<br>
+                            <em>Ouvert tous les jours de l'année</em></p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">🚚</div>
+                        <div class="contact-details">
+                            <h4>Livraison</h4>
+                            <p>Casablanca: 30 DH (gratuit dès 300 DH)<br>
+                            Rabat/Salé: 50 DH<br>
+                            Autres villes: Sur demande<br>
+                            <em>Livraison le jour même possible</em></p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">💳</div>
+                        <div class="contact-details">
+                            <h4>Moyens de Paiement</h4>
+                            <p>Espèces, Cartes bancaires<br>
+                            Virement bancaire<br>
+                            Paiement à la livraison<br>
+                            <em>Devis gratuit pour événements</em></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form fade-in">
+                    <h3>Formulaire de Contact</h3>
+                    <form onsubmit="submitContactForm(event)">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="nom">Nom Complet *</label>
+                                <input type="text" id="nom" name="nom" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="telephone">Téléphone *</label>
+                                <input type="tel" id="telephone" name="telephone" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Adresse Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="type-demande">Type de Demande</label>
+                                <select id="type-demande" name="type-demande">
+                                    <option value="commande">Commande Standard</option>
+                                    <option value="evenement">Événement/Mariage</option>
+                                    <option value="corporate">Commande Entreprise</option>
+                                    <option value="cours">Cours de Pâtisserie</option>
+                                    <option value="autre">Autre</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="date-souhaitee">Date Souhaitée</label>
+                                <input type="date" id="date-souhaitee" name="date-souhaitee">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="produits">Produits Souhaités</label>
+                            <input type="text" id="produits" name="produits" placeholder="Ex: Gâteau d'anniversaire, macarons...">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="nombre-personnes">Nombre de Personnes</label>
+                            <input type="number" id="nombre-personnes" name="nombre-personnes" min="1" placeholder="Pour dimensionner votre commande">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message Détaillé *</label>
+                            <textarea id="message" name="message" rows="6" placeholder="Décrivez votre demande, vos préférences, allergies éventuelles..." required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="budget">Budget Approximatif</label>
+                            <select id="budget" name="budget">
+                                <option value="">Sélectionnez une fourchette</option>
+                                <option value="0-200">Moins de 200 DH</option>
+                                <option value="200-500">200 - 500 DH</option>
+                                <option value="500-1000">500 - 1000 DH</option>
+                                <option value="1000-2000">1000 - 2000 DH</option>
+                                <option value="2000+">Plus de 2000 DH</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="submit-btn">Envoyer la Demande</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="map-section">
+        <div class="container">
+            <h3 class="section-title fade-in">Notre Localisation</h3>
+            <div class="map-container fade-in">
+                🗺️ Plan interactif - 45 Avenue Mohammed V, Quartier des Habous, Casablanca<br>
+                📍 Proche de la Mosquée Hassan II et du centre-ville<br>
+                🚗 Parking disponible | 🚌 Arrêt de bus à 50m
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Délices Dorés</h3>
+                    <p>Depuis 1985, nous créons des moments magiques avec nos pâtisseries artisanales. La tradition française au cœur de Casablanca.</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon">📘</a>
+                        <a href="#" class="social-icon">📷</a>
+                        <a href="#" class="social-icon">🐦</a>
+                        <a href="#" class="social-icon">📱</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Nos Spécialités</h3>
+                    <ul>
+                        <li><a href="#products">Gâteaux d'Anniversaire</a></li>
+                        <li><a href="#products">Pièces Montées</a></li>
+                        <li><a href="#products">Macarons Premium</a></li>
+                        <li><a href="#products">Viennoiseries</a></li>
+                        <li><a href="#products">Chocolats Fins</a></li>
+                        <li><a href="#products">Tartes de Saison</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#contact">Livraison à Domicile</a></li>
+                        <li><a href="#contact">Commandes Personnalisées</a></li>
+                        <li><a href="#contact">Événements & Mariages</a></li>
+                        <li><a href="#contact">Cours de Pâtisserie</a></li>
+                        <li><a href="#contact">Buffets Sucrés</a></li>
+                        <li><a href="#contact">Conseils Personnalisés</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Informations</h3>
+                    <ul>
+                        <li><a href="#contact">Horaires & Accès</a></li>
+                        <li><a href="#contact">Zones de Livraison</a></li>
+                        <li>Allergènes & Ingrédients</li>
+                        <li>Conditions de Vente</li>
+                        <li>Politique de Confidentialité</li>
+                        <li>FAQ</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Délices Dorés. Tous droits réservés. | Pâtisserie Artisanale - Casablanca, Maroc | SARL au capital de 200.000 DH</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
